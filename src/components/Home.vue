@@ -59,9 +59,9 @@ export default {
     Rating: Rating,
   },
   data: () => ({
-    hamster: require("@/assets/hamster.jpg"),
     robot: require("@/assets/robot.png"),
     airplane: require("@/assets/airplane.png"),
+    hamster: require("@/assets/hamster.jpg"),
   }),
 };
 </script>
