@@ -47,9 +47,9 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
-import Hero from "./Hero.vue";
-import Rating from "./Rating.vue";
+import Button from "./Button.vue"
+import Hero from "./Hero.vue"
+import Rating from "./Rating.vue"
 
 export default {
   name: "Home",
@@ -59,11 +59,11 @@ export default {
     Rating: Rating,
   },
   data: () => ({
-    robot: require("@/assets/robot.png"),
-    airplane: require("@/assets/airplane.png"),
-    hamster: require("@/assets/hamster.jpg"),
+    robot: "/src/assets/robot.jpg",
+    airplane: "/src/assets/airplane.jpg",
+    hamster: "/src/assets/hamster.jpg",
   }),
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

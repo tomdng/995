@@ -16,7 +16,7 @@ export default {
     desc: String,
     review: String,
   },
-};
+}
 </script>
 
 <style scoped>
