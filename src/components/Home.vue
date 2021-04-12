@@ -59,9 +59,9 @@ export default {
     Rating: Rating,
   },
   data: () => ({
-    robot: "/src/assets/robot.jpg",
-    airplane: "/src/assets/airplane.jpg",
-    hamster: "/src/assets/hamster.jpg",
+    robot: "/robot.jpg",
+    airplane: "/airplane.jpg",
+    hamster: "/hamster.jpg",
   }),
 }
 </script>
