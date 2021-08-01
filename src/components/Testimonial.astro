@@ -1,0 +1,33 @@
+---
+export interface Props {
+  name: string;
+	quote: string;
+	role: string;
+}
+
+const { name, quote, role } = Astro.props;
+---
+
+<article>
+	<div class="quote">
+		<p>{quote}</p>
+	</div>
+
+	<div class="author">
+		<h2>{name}</h2>
+		<p>{role}</p>
+	</div>
+</article>
+
+<style lang="scss">
+	article {
+	}
+
+	.quote {
+		background: #252525;
+	}
+
+	.author {
+		background: #fff;
+	}
+</style>
