@@ -1,0 +1,37 @@
+---
+export interface Props {
+    title: string;
+    callToActionLink: string;
+    callToActionText: string;
+}
+
+const { title, callToActionLink, callToActionText } = Astro.props;
+---
+<article>
+    <div>
+        <h1>{title}</h1>
+        <a href={callToActionLink}>{callToActionText}</a>
+    </div>
+</article>
+
+<style lang="scss">
+    article {
+        background: #fff;
+        height: calc(100vh - 72px);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        color: #0f0f0f;
+        font-size: 96px;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: #0f0f0f;
+        font-size: 24px;
+    }
+</style>
