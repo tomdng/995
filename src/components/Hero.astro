@@ -7,16 +7,20 @@ export interface Props {
 
 const { title, callToActionLink, callToActionText } = Astro.props;
 ---
-<article>
+<article class="pl-32">
     <div>
-        <h1>{title}</h1>
-        <a href={callToActionLink}>{callToActionText}</a>
+        <h1 class="mb-4 text-black text-8xl font-bold leading-none">{title}</h1>
+        <a
+            href={callToActionLink}
+            class="text-accent underline"
+        >
+            {callToActionText}
+        </a>
     </div>
 </article>
 
 <style lang="scss">
     article {
-        padding: 0 0 0 8rem;
         height: calc(100vh - 72px);
         width: 100%;
         background: url('/assets/hero.jpeg') #fff;
@@ -26,14 +30,10 @@ const { title, callToActionLink, callToActionText } = Astro.props;
     }
 
     h1 {
-        color: #0f0f0f;
-        font-size: 96px;
-        margin-bottom: 1rem;
         max-width: 512px;
     }
 
     a {
-        color: #ff3f3f;
         font-size: 24px;
     }
 </style>
