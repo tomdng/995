@@ -1,9 +1,11 @@
 ---
+import Container from '../layouts/Container.astro';
 import FlexGrid from '../layouts/FlexGrid.astro';
 import Hero from '../components/Hero.astro';
 import Nav from '../components/Nav.astro';
 import Tour from '../components/Tour.astro';
 import Testimonial from '../components/Testimonial.astro';
+import TextContainer from '../layouts/TextContainer.astro';
 ---
 <html lang="en">
 <head>
@@ -12,11 +14,6 @@ import Testimonial from '../components/Testimonial.astro';
     <title>995</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style/global.css">
-
-    <style>
-        header {
-        }
-    </style>
 </head>
 <body>
     <main>
@@ -25,6 +22,35 @@ import Testimonial from '../components/Testimonial.astro';
             <Hero />
         </header>
 
+        <TextContainer>
+            <p class="mb-16 font-bold text-4xl">
+                995 is a revolutionary approach to all-American consumerism and consumption.
+                Our partners and engineers have worked hard to allow people to consume more.
+            </p>
+
+            <p class="mb-16 font-bold text-4xl">
+                We have determined that 995 is the ideal price for all goods and services.
+                A price accessible to all,
+                regardless of where we place the decimal.    
+            </p>
+
+
+        </TextContainer>
+
+        <img
+            src="/assets/price-tag.svg"
+            alt="Graphic of price tag"
+            class="mb-16 ml-auto w-full max-w-screen-xl"
+        />
+
+        <TextContainer>
+            <p class="font-bold text-4xl">
+                995 is a concept for all, but each individual is deeply affected in their
+                own individual way. Check out their stories below.
+            </p>
+        </TextContainer>
+
+        <Container>
         <FlexGrid>
             <Testimonial
                 name="Levi M"
@@ -32,12 +58,14 @@ import Testimonial from '../components/Testimonial.astro';
                 quote="For $9.95 and an angler grinder, I can provide door
                     opening services."
             />
+
             <Testimonial
                 name="Levi M"
                 role="Team Boomer"
                 quote="For $9.95 and an angler grinder, I can provide door
                     opening services."
             />
+
             <Testimonial
                 name="Levi M"
                 role="Team Boomer"
@@ -45,7 +73,7 @@ import Testimonial from '../components/Testimonial.astro';
                     opening services."
             />
         </FlexGrid>
-        <Tour />
+        </Container>
     </main>
 </body>
 </html>
