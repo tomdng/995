@@ -1,0 +1,11 @@
+---
+export interface Props {
+    lightTheme: boolean;
+}
+
+const { lightTheme } = Astro.props;
+---
+
+<span class={lightTheme ? "text-black" : "text-white"}>9</span>
+<span class="text-accent">9</span>
+<span class="text-gray">5</span>

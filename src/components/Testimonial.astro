@@ -10,7 +10,11 @@ const { name, quote, role } = Astro.props;
 
 <article>
     <section class="quote p-8">
-        <p class="font-semibold text-xl">{quote}</p>
+        <p class="font-semibold text-xl">
+            <span>"</span>
+            {quote}
+            <span>"</span>
+        </p>
     </section>
 
     <section class="author mt-auto mb-0 px-8 py-4">
