@@ -9,23 +9,32 @@ const { name, quote, role } = Astro.props;
 ---
 
 <article>
-    <section class="quote">
-        <p>{quote}</p>
+    <section class="quote p-8">
+        <p class="font-semibold text-xl">{quote}</p>
     </section>
 
-    <section class="author">
-        <h2>{name}</h2>
-        <p>{role}</p>
+    <section class="author mt-auto mb-0 px-8 py-4">
+        <h2 class="font-bold text-2xl">{name}</h2>
+        <p class="font-normal text-lg">{role}</p>
     </section>
 </article>
 
 <style lang="scss">
     article {
+        min-width: 256px;
+        max-width: 400px;
+        background: #252525;
+        border-radius: 8px;
+        overflow: hidden;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .quote {
-        background: #252525;
         color: #fff;
+        word-wrap: break-word;
     }
 
     .author {

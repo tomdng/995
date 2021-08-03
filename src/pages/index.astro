@@ -1,6 +1,7 @@
 ---
 import Container from '../layouts/Container.astro';
 import FlexGrid from '../layouts/FlexGrid.astro';
+import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import Nav from '../components/Nav.astro';
 import Tour from '../components/Tour.astro';
@@ -16,11 +17,12 @@ import TextContainer from '../layouts/TextContainer.astro';
     <link rel="stylesheet" href="/style/global.css">
 </head>
 <body>
+    <header>
+        <Nav />
+    </header>
+
     <main>
-        <header>
-            <Nav />
-            <Hero />
-        </header>
+        <Hero />
 
         <TextContainer>
             <p class="mb-16 font-bold text-4xl">
@@ -51,29 +53,36 @@ import TextContainer from '../layouts/TextContainer.astro';
         </TextContainer>
 
         <Container>
-        <FlexGrid>
-            <Testimonial
-                name="Levi M"
-                role="Team Boomer"
-                quote="For $9.95 and an angler grinder, I can provide door
-                    opening services."
-            />
+            <FlexGrid>
+                <Testimonial
+                    name="Levi M"
+                    role="Team Boomer"
+                    quote="For $9.95 and an angler grinder, I can provide door
+                        opening services."
+                />
 
-            <Testimonial
-                name="Levi M"
-                role="Team Boomer"
-                quote="For $9.95 and an angler grinder, I can provide door
-                    opening services."
-            />
+                <Testimonial
+                    name="Chandler C"
+                    role="Late Riser"
+                    quote="Trophies need plaques for as low as $9.95."
+                />
 
-            <Testimonial
-                name="Levi M"
-                role="Team Boomer"
-                quote="For $9.95 and an angler grinder, I can provide door
-                    opening services."
-            />
-        </FlexGrid>
+                <Testimonial
+                    name="Levi M"
+                    role="Team Boomer"
+                    quote="If they cant I would suggest emailing
+                        almostanythingfor9.95@gmail.com."
+                />
+            </FlexGrid>
         </Container>
+
+        <TextContainer>
+            <p class="font-bold text-4xl">
+                Consume more today. Consume 995.
+            </p>
+        </TextContainer>
     </main>
+
+    <Footer />
 </body>
 </html>
