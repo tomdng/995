@@ -1,0 +1,91 @@
+---
+import Colored995 from '../components/Colored995.astro';
+import Container from '../layouts/Container.astro';
+import FlexGrid from '../layouts/FlexGrid.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Nav from '../components/Nav.astro';
+import Testimonial from '../components/Testimonial.astro';
+import TextContainer from '../layouts/TextContainer.astro';
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>995</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/style/global.css">
+</head>
+<body>
+    <header>
+        <Nav />
+    </header>
+
+    <main>
+        <Hero />
+
+        <TextContainer>
+            <p class="mb-16 font-bold text-4xl">
+                <Colored995 /> is a modern approach to all-American consumerism
+                and consumption. Our partners and engineers have worked hard to
+                allow people to consume more, but in a more refined manner.
+            </p>
+
+            <p class="mb-16 font-bold text-4xl">
+                We have determined that <Colored995 /> is the ideal price for all goods and services.
+                <span class="text-accent">A price accessible to everyone,</span>
+                regardless of where we place the decimal.    
+            </p>
+
+
+        </TextContainer>
+
+        <img
+            src="/assets/price-tag.svg"
+            alt="Graphic of price tag"
+            class="mb-16 ml-auto w-full max-w-screen-xl"
+        />
+
+        <TextContainer>
+            <p class="font-bold text-4xl">
+                <Colored995 /> is a concept for all, but each individual is deeply affected in their
+                own individual way. Check out their stories below.
+            </p>
+        </TextContainer>
+
+        <Container>
+            <FlexGrid>
+                <Testimonial
+                    name="Levi M"
+                    role="Team Boomer"
+                    quote="For $9.95 and an angler grinder, I can provide door
+                        opening services."
+                />
+
+                <Testimonial
+                    name="Chandler C"
+                    role="Late Riser"
+                    quote="Trophies need plaques for as low as $9.95."
+                />
+
+                <Testimonial
+                    name="Levi M"
+                    role="Team Boomer"
+                    quote="If they cant I would suggest emailing
+                        almostanythingfor9.95@gmail.com."
+                />
+            </FlexGrid>
+        </Container>
+
+        <TextContainer>
+            <p class="font-bold text-4xl">
+                Consume more today.
+                <a class="underline" href="/shop">Consume <Colored995 />.
+                </a>
+            </p>
+        </TextContainer>
+    </main>
+
+    <Footer />
+</body>
+</html>

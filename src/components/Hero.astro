@@ -1,0 +1,33 @@
+---
+import Colored995 from './Colored995.astro';
+---
+
+<article class="pl-32">
+    <div>
+        <h1 class="mb-4 text-black text-8xl font-bold leading-tight">
+            <Colored995 lightTheme />, the only price worth it.
+        </h1>
+        <a href="/shop" class="font-bold text-accent underline">Shop now.</a>
+    </div>
+</article>
+
+<style lang="scss">
+    article {
+        height: calc(100vh - 72px);
+        width: 100%;
+        background: url('/assets/hero.jpeg') #fff;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+
+    h1 {
+        max-width: 512px;
+        text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+        font-size: 24px;
+        text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
