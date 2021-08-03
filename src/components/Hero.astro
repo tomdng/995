@@ -1,21 +1,9 @@
----
-export interface Props {
-    title: string;
-    callToActionLink: string;
-    callToActionText: string;
-}
-
-const { title, callToActionLink, callToActionText } = Astro.props;
----
 <article class="pl-32">
     <div>
-        <h1 class="mb-4 text-black text-8xl font-bold leading-none">{title}</h1>
-        <a
-            href={callToActionLink}
-            class="text-accent underline"
-        >
-            {callToActionText}
-        </a>
+        <h1 class="mb-4 text-black text-8xl font-bold leading-tight">
+            995, the only price worth it.
+        </h1>
+        <a href="/shop" class="text-accent underline">Shop now.</a>
     </div>
 </article>
 

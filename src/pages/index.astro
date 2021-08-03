@@ -1,6 +1,7 @@
 ---
 import FlexGrid from '../layouts/FlexGrid.astro';
 import Hero from '../components/Hero.astro';
+import Nav from '../components/Nav.astro';
 import Tour from '../components/Tour.astro';
 import Testimonial from '../components/Testimonial.astro';
 ---
@@ -20,11 +21,8 @@ import Testimonial from '../components/Testimonial.astro';
 <body>
     <main>
         <header>
-            <Hero
-                title="995, The only price worth it."
-                callToActionLink="/shop"
-                callToActionText="Shop now."
-            />
+            <Nav />
+            <Hero />
         </header>
 
         <FlexGrid>

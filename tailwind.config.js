@@ -7,9 +7,12 @@ module.exports = {
     colors: {
       accent: "#ff3f3f",
       black: colors.black,
-      darkGrey: "#252525",
-      grey: "#a0a0a0",
       white: colors.white,
+      gray: {
+        dark: "#252525",
+        DEFAULT: "#a0a0a0",
+        light: "#d8d8d8",
+      },
     },
   },
 }
