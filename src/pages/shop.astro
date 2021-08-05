@@ -1,6 +1,9 @@
 ---
+import Colored995 from '../components/Colored995.astro';
+import FlexGrid from '../layouts/FlexGrid.astro';
 import Footer from '../components/Footer.astro';
 import Nav from '../components/Nav.astro';
+import ShopItem from '../components/ShopItem.astro';
 ---
 <html lang="en">
 <head>
@@ -9,6 +12,10 @@ import Nav from '../components/Nav.astro';
     <title>995 | Shop</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style/global.css">
+    <!-- Snipcart -->
+    <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://cdn.snipcart.com">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
 </head>
 
 <body>
@@ -17,11 +24,40 @@ import Nav from '../components/Nav.astro';
     </header>
 
     <main>
-        <img class="my-32 mx-auto w-64" src="/assets/logo-square.jpg" alt="995 Logo" />
+        <div class="px-32 pb-8 bg-gray-dark flex flex-col items-center">
+            <hr class="w-full text-gray-lightest" />
 
-        <h1 class="my-32 mx-32 text-8xl">Shop in progress, check back in a week for more progress!</h1>
+            <h1 class="my-8 mx-auto text-2xl font-semibold">Doesn't matter where the decimal is,
+                all prices <Colored995 />.
+            </h1>
+
+            <p class="text-base">
+                For inquiries and product requests, please email
+                <a
+                    href="mailto:almostanythingfor995@gmail.com"
+                    class="underline text-accent"
+                >
+                    almostanythingfor995@gmail.com
+                </a>
+            </p>
+        </div>
+
+        <FlexGrid>
+            <ShopItem
+                description="An upgraded version of our basic tee with actually good materials"
+                imgUrl=""
+                itemId="premium-t-shirt"
+                itemUrl=""
+                name="Premium t-shirt"
+                price="59.5"
+            />
+        </FlexGrid>
     </main>
 
     <Footer />
+
+    <!-- Snipcart -->
+    <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div>
 </body>
 </html>

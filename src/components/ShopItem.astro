@@ -1,0 +1,41 @@
+---
+export interface Props {
+    description: string;
+    imgUrl: string;
+    itemId: string;
+    itemUrl: string;
+    name: string;
+    price: number;
+    salePrice?: number;
+}
+
+const { description, id, imgUrl, itemUrl, name, price, salePrice } = Astro.props;
+
+const itemOnSale = salePrice && salePrice < price;
+---
+
+<!-- TODO: Format price and format if sale -->
+<article>
+    <img src={imgUrl} alt={name} />
+
+    <div>
+        <h2>
+            {name}
+            {itemOnSale ? (
+                <span class="text-gray">(Sale)</span>
+            ) : null}
+        </h2>
+    </div>
+
+    <div>
+        <p>
+            {price}
+            {itemOnSale ? (
+                <span class="line-through text-gray">{salePrice}</span>
+            ) : null}
+        </p>
+    </div>
+</article>
+
+<style lang="scss">
+</style>
