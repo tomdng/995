@@ -2,13 +2,12 @@
 import Colored995 from '../components/Colored995.astro';
 import Footer from '../components/Footer.astro';
 import Nav from '../components/Nav.astro';
-import ShopItem from '../components/ShopItem.astro';
+import ShopItem from '../components/ShopItem.vue';
 
 import Container from '../layouts/Container.astro';
 import FlexGrid from '../layouts/FlexGrid.astro';
 
-// Astro doesn't like non-default imports...
-import productList from '../data/products.js';
+import { productList } from '../data/products.ts';
 ---
 
 <html lang="en">
@@ -19,9 +18,9 @@ import productList from '../data/products.js';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style/global.css">
     <!-- Snipcart -->
-    <!-- <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://app.snipcart.com">
     <link rel="preconnect" href="https://cdn.snipcart.com">
-    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" /> -->
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
 </head>
 
 <body>
@@ -52,6 +51,7 @@ import productList from '../data/products.js';
             <FlexGrid>
                 {productList.map((product) => (
                     <ShopItem
+                        client:visible
                         description={product.description}
                         imgUrl={product.imgUrl}
                         itemId={product.itemId}
@@ -68,7 +68,7 @@ import productList from '../data/products.js';
     <Footer />
 
     <!-- Snipcart -->
-    <!-- <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
-    <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div> -->
+    <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div>
 </body>
 </html>
