@@ -18,18 +18,18 @@ const itemOnSale = salePrice && salePrice < price;
 <article>
     <img src={imgUrl} alt={name} />
 
-    <div>
+    <div class="mt-2">
         <h2>
             {name}
             {itemOnSale ? (
-                <span class="text-gray">(Sale)</span>
+                <span class="text-gray"> (Sale)</span>
             ) : null}
         </h2>
     </div>
 
     <div>
-        <p>
-            {price}
+        <p class={`font-semibold ${itemOnSale ? "text-accent" : "text-white"}`}>
+            {price}{" "}
             {itemOnSale ? (
                 <span class="line-through text-gray">{salePrice}</span>
             ) : null}
@@ -38,4 +38,7 @@ const itemOnSale = salePrice && salePrice < price;
 </article>
 
 <style lang="scss">
+    article {
+        max-width: 512px;
+    }
 </style>

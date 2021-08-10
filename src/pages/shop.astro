@@ -1,10 +1,16 @@
 ---
 import Colored995 from '../components/Colored995.astro';
-import FlexGrid from '../layouts/FlexGrid.astro';
 import Footer from '../components/Footer.astro';
 import Nav from '../components/Nav.astro';
 import ShopItem from '../components/ShopItem.astro';
+
+import Container from '../layouts/Container.astro';
+import FlexGrid from '../layouts/FlexGrid.astro';
+
+// Astro doesn't like non-default imports...
+import productList from '../data/products.js';
 ---
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,9 +19,9 @@ import ShopItem from '../components/ShopItem.astro';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style/global.css">
     <!-- Snipcart -->
-    <link rel="preconnect" href="https://app.snipcart.com">
+    <!-- <link rel="preconnect" href="https://app.snipcart.com">
     <link rel="preconnect" href="https://cdn.snipcart.com">
-    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" /> -->
 </head>
 
 <body>
@@ -42,22 +48,27 @@ import ShopItem from '../components/ShopItem.astro';
             </p>
         </div>
 
-        <FlexGrid>
-            <ShopItem
-                description="An upgraded version of our basic tee with actually good materials"
-                imgUrl=""
-                itemId="premium-t-shirt"
-                itemUrl=""
-                name="Premium t-shirt"
-                price="59.5"
-            />
-        </FlexGrid>
+        <Container>
+            <FlexGrid>
+                {productList.map((product) => (
+                    <ShopItem
+                        description={product.description}
+                        imgUrl={product.imgUrl}
+                        itemId={product.itemId}
+                        itemUrl={product.itemUrl}
+                        name={product.name}
+                        price={product.price}
+                        salePrice={product.salePrice}
+                    />
+                ))}
+            </FlexGrid>
+        </Container>
     </main>
 
     <Footer />
 
     <!-- Snipcart -->
-    <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
-    <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div>
+    <!-- <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div> -->
 </body>
 </html>
