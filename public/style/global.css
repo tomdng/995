@@ -18,10 +18,13 @@
 
 body {
   width: 100%;
-  min-height: 100vh;
   background: #000000;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+main {
+  min-height: calc(100vh - 72px);
 }

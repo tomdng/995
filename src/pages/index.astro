@@ -15,7 +15,12 @@ import TextContainer from '../layouts/TextContainer.astro';
     <title>995</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style/global.css">
+    <!-- Snipcart -->
+    <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://cdn.snipcart.com">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
 </head>
+
 <body>
     <header>
         <Nav />
@@ -69,8 +74,8 @@ import TextContainer from '../layouts/TextContainer.astro';
                 />
 
                 <Testimonial
-                    name="Levi M"
-                    role="Team Boomer"
+                    name="Chana M"
+                    role="She actually emailed us"
                     quote="If they cant I would suggest emailing
                         almostanythingfor9.95@gmail.com."
                 />
@@ -87,5 +92,9 @@ import TextContainer from '../layouts/TextContainer.astro';
     </main>
 
     <Footer />
+
+    <!-- Snipcart -->
+    <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="ODUwNGNmYmYtZjMzYi00YjVjLWEzNzUtN2U0M2QzZjFiMDY4NjM3NjMzOTEyNjQxOTk5MzUw"></div>
 </body>
 </html>

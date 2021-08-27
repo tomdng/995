@@ -1,7 +1,15 @@
 ---
+import Colored995 from '../components/Colored995.astro';
 import Footer from '../components/Footer.astro';
 import Nav from '../components/Nav.astro';
+import ShopItem from '../components/ShopItem.vue';
+
+import Container from '../layouts/Container.astro';
+import FlexGrid from '../layouts/FlexGrid.astro';
+
+import { productList } from '../data/products.ts';
 ---
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +17,10 @@ import Nav from '../components/Nav.astro';
     <title>995 | Shop</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style/global.css">
+    <!-- Snipcart -->
+    <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://cdn.snipcart.com">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
 </head>
 
 <body>
@@ -17,11 +29,46 @@ import Nav from '../components/Nav.astro';
     </header>
 
     <main>
-        <img class="my-32 mx-auto w-64" src="/assets/logo-square.jpg" alt="995 Logo" />
+        <div class="px-32 pb-8 bg-gray-dark flex flex-col items-center">
+            <hr class="w-full text-gray-lightest" />
 
-        <h1 class="my-32 mx-32 text-8xl">Shop in progress, check back in a week for more progress!</h1>
+            <h1 class="my-8 mx-auto text-2xl font-semibold">Doesn't matter where the decimal is,
+                all prices <Colored995 />.
+            </h1>
+
+            <p class="text-base">
+                For inquiries and product requests, please email
+                <a
+                    href="mailto:almostanythingfor995@gmail.com"
+                    class="underline text-accent"
+                >
+                    almostanythingfor995@gmail.com
+                </a>
+            </p>
+        </div>
+
+        <Container>
+            <FlexGrid>
+                {productList.map((product) => (
+                    <ShopItem
+                        client:visible
+                        description={product.description}
+                        imgUrl={product.imgUrl}
+                        itemId={product.itemId}
+                        itemUrl={product.itemUrl}
+                        name={product.name}
+                        price={product.price}
+                        salePrice={product.salePrice}
+                    />
+                ))}
+            </FlexGrid>
+        </Container>
     </main>
 
     <Footer />
+
+    <!-- Snipcart -->
+    <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="ODUwNGNmYmYtZjMzYi00YjVjLWEzNzUtN2U0M2QzZjFiMDY4NjM3NjMzOTEyNjQxOTk5MzUw"></div>
 </body>
 </html>
