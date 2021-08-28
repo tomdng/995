@@ -1,10 +1,12 @@
 <!--
-  TODO: Add support for sizes/color, etc
   NOTE: I highly doubt hovering to add the item to cart is a good choice
   in terms of accessibility
 -->
 <template>
+  <article v-if="itemId === 'placeholder'"></article>
+
   <article
+    v-else
     class="snipcart-add-item"
     @mouseover="overlayOn"
     @mouseleave="overlayOff"
@@ -14,6 +16,8 @@
     :data-item-description="description"
     :data-item-image="imgUrl"
     :data-item-name="name"
+    :data-item-custom1-name="custom1Name"
+    :data-item-custom1-options="custom1Options"
   >
     <div class="ShopItem__image-container">
       <img :src="imgUrl" :alt="name" />
@@ -74,6 +78,8 @@ export default {
       required: true,
     },
     salePrice: Number,
+    custom1Name: String,
+    custom1Options: String,
   },
   data: function () {
     return {
@@ -103,7 +109,7 @@ export default {
 
 <style lang="scss" scoped>
 article {
-  max-width: 512px;
+  width: 512px;
   position: relative;
 }
 
@@ -116,7 +122,9 @@ article {
 
 img {
   position: absolute;
-  min-height: 100%;
+  object-fit: cover;
+  /* Centers both portrait and landscape aspect ratios */
+  height: 100%;
   min-width: 100%;
 }
 

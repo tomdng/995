@@ -1,55 +1,114 @@
 interface SnipCartProduct {
-  description: string;
-  itemId: string;
-  imgUrl: string;
-  itemUrl: string;
-  name: string;
-  price: number;
-  salePrice? : number;
-  // Indexer allows additional properties to object
-  // Very useful for SnipCart's custom properties for product variations
-  [x: string]: any
+  description: string
+  itemId: string
+  imgUrl: string
+  itemUrl: string
+  name: string
+  price: number
+  salePrice?: number
+  custom1Name?: String
+  custom1Options?: String
 }
 
-export const productList: SnipCartProduct[] = [
+interface Placeholder {
+  itemId: "placeholder"
+}
+
+export const productList: (SnipCartProduct | Placeholder)[] = [
   {
     description:
-      "An upgraded version of our basic tee with actually good materials",
-    imgUrl: "/assets/shop/premium-t-shirt.jpg",
-    itemId: "premium-t-shirt",
+      "Show off your all-American consumption of fashion with this rectangular 995 logo in light mode.",
+    imgUrl: "/assets/shop/shirts/995-bar-tee-white.jpg",
+    itemId: "995-bar-tee-white",
     itemUrl: "/shop",
-    name: "Premium t-shirt",
+    name: "995 bar tee light",
     price: 59.5,
     salePrice: 0,
+    custom1Name: "Size",
+    custom1Options: "sm|med|lg|xl",
   },
   {
     description:
-      "An upgraded version of our basic tee with actually good materials",
-    imgUrl: "/assets/shop/big-hoodie.jpg",
-    itemId: "big-hoodie",
+      "Show off your all-American consumption of fashion with this square 995 logo in light mode.",
+    imgUrl: "/assets/shop/shirts/995-square-tee-white.jpg",
+    itemId: "995-square-tee-white",
     itemUrl: "/shop",
-    name: "Big hoodie",
+    name: "995 square tee light",
     price: 59.5,
     salePrice: 5.95,
+    custom1Name: "Size",
+    custom1Options: "sm|med|lg|xl",
   },
   {
     description:
-      "An upgraded version of our basic tee with actually good materials",
-    imgUrl: "/assets/hero-alt.jpeg",
-    itemId: "placeholder-shirt-2",
+      "Not a big flexer? This smaller logo is for those who like low-key be baller.",
+    imgUrl: "/assets/shop/shirts/995-sm-square-tee-white.jpg",
+    itemId: "995-sm-square-tee-white",
     itemUrl: "/shop",
-    name: "Placeholder 2",
+    name: "995 sm square tee light",
+    price: 59.5,
+    salePrice: 5.95,
+    custom1Name: "Size",
+    custom1Options: "sm|med|lg|xl",
+  },
+  {
+    description: "Hoodies are amazing. Buy now.",
+    imgUrl: "/assets/shop/hoodies/995-sq-hoodie-white.jpg",
+    itemId: "995-sq-hoodie-white",
+    itemUrl: "/shop",
+    name: "995 square hoodie light",
     price: 59.5,
     salePrice: 0,
+    custom1Name: "Size",
+    custom1Options: "sm|med|lg|xl",
   },
   {
     description:
-      "An upgraded version of our basic tee with actually good materials",
-    imgUrl: "/assets/hero-alt.jpeg",
-    itemId: "placeholder-3",
+      "If you didn't want to buy the same hoodie again, this one has a slightly different logo.",
+    imgUrl: "/assets/shop/hoodies/995-sm-rect-tee-white.jpg",
+    itemId: "995-sm-rect-tee-white",
     itemUrl: "/shop",
-    name: "Placeholder 3",
+    name: "995 rectangle hoodie light",
     price: 59.5,
     salePrice: 0,
+    custom1Name: "Size",
+    custom1Options: "sm|med|lg|xl",
+  },
+  {
+    description:
+      "Rare limited edition yellow that is honestly more iconic than the logo itself.",
+    imgUrl: "/assets/shop/hoodies/995-square-tee-yellow.jpg",
+    itemId: "995-square-tee-yellow",
+    itemUrl: "/shop",
+    name: "995 rectangle hoodie yellow",
+    price: 595,
+    salePrice: 0,
+    custom1Name: "Size",
+    custom1Options: "sm|med|lg|xl",
+  },
+  {
+    description: "Dark mode always has a price tag because it's so good.",
+    imgUrl: "/assets/shop/shirts/995-bar-tee-black.jpg",
+    itemId: "995-bar-tee-black",
+    itemUrl: "/shop",
+    name: "995 bar tee dark",
+    price: 59.5,
+    salePrice: 0,
+    custom1Name: "Size",
+    custom1Options: "sm|med|lg|xl",
+  },
+  {
+    description: "Dark mode t-shirts should cost more. Change my mind.",
+    imgUrl: "/assets/shop/shirts/995-square-tee-black.jpg",
+    itemId: "995-square-tee-black",
+    itemUrl: "/shop",
+    name: "995 square tee dark",
+    price: 59.5,
+    salePrice: 0,
+    custom1Name: "Size",
+    custom1Options: "sm|med|lg|xl",
+  },
+  {
+    itemId: "placeholder",
   },
 ]

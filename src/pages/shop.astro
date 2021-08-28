@@ -37,12 +37,12 @@ import { productList } from '../data/products.ts';
             </h1>
 
             <p class="text-base">
-                For inquiries and product requests, please email
+                Questions? Want more products to consume?
                 <a
                     href="mailto:almostanythingfor995@gmail.com"
                     class="underline text-accent"
                 >
-                    almostanythingfor995@gmail.com
+                    Talk to us.
                 </a>
             </p>
         </div>
@@ -59,6 +59,8 @@ import { productList } from '../data/products.ts';
                         name={product.name}
                         price={product.price}
                         salePrice={product.salePrice}
+                        custom1Name={product.custom1Name}
+                        custom1Options={product.custom1Options}
                     />
                 ))}
             </FlexGrid>
