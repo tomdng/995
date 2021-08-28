@@ -1,38 +1,54 @@
-# Using Vue with Astro
+<!--
+*** Thanks to the Best-README-Template for making this README look nice!
+*** Get it here https://github.com/othneildrew/Best-README-Template
+-->
 
-This example showcases Astro's built-in support for [Vue](https://v3.vuejs.org/).
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://almostanythingfor995.com/">
+    <img src="misc/logo-square.jpg" alt="Logo" width="256" height="256">
+  </a>
 
-## Installation
+  <h3 align="center">995</h3>
 
-### Automatic
+  <p align="center">
+    What if everything was priced at 995? Or 9.95? or 99.5? This is a shop that dares to do so.
+  </p>
+</p>
 
-Bootstrap your Astro project with this template!
+### Built With
 
-```shell
-npm init astro -- --template framework-vue
-```
+- [Astro 🚀](https://astro.build/)
+- [Vue](https://astro.build/)
+- [SnipCart](https://snipcart.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 
-### Manual
+## Why?
 
-To use Vue components in your Astro project:
+Two reasons.
 
-1. Install `@astrojs/renderer-vue`
+1) Support consumerism.
+2) Try out the new Astro framework. Although unfortunately I don't really push the whole concept of island architecture with what I built. It was still fun learning the quirks of Astro and I'd like to really push the island architecture concept with future projects.
 
-    ```shell
-    npm i @astrojs/renderer-vue
-    ```
+## Getting Started
 
-2. Add `"@astrojs/renderer-vue"` to your `renderers` in `astro.config.mjs`.
+To get a local copy up and running follow these simple steps.
 
-    ```js
-    export default {
-      renderers: [
-        "@astrojs/renderer-vue",
-        // optionally, others...
-      ]
-    }
-    ```
+- Get NodeJS and Yarn
 
-## Usage
+### Installation
 
-Write your Vue components as `.vue` files in your project.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/github_username/repo_name.git
+   ```
+2. Install packages
+   ```sh
+   yarn install
+   ```
+3. Run in dev mode
+   ```sh
+   yarn dev
+   ```
+4. Visit `localhost:3000`!
