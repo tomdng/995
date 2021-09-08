@@ -111,6 +111,10 @@ export default {
 article {
   width: 512px;
   position: relative;
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .ShopItem__image-container {
@@ -118,6 +122,11 @@ article {
   padding-bottom: 100%;
   overflow: hidden;
   position: relative;
+
+  @media(max-width: 768px) {
+    min-width: 0;
+    max-width: 100%;
+  }
 }
 
 img {
