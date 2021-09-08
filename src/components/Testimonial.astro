@@ -8,9 +8,9 @@ export interface Props {
 const { name, quote, role } = Astro.props;
 ---
 
-<article>
+<article class="min-w-full lg:min-w-0 lg:max-w-lg">
     <section class="quote p-8">
-        <p class="font-semibold text-xl">
+        <p class="font-semibold text-lg md:text-xl">
             <span>"</span>
             {quote}
             <span>"</span>
@@ -18,15 +18,13 @@ const { name, quote, role } = Astro.props;
     </section>
 
     <section class="author mt-auto mb-0 px-8 py-4">
-        <h2 class="font-bold text-2xl">{name}</h2>
-        <p class="font-normal text-lg">{role}</p>
+        <h2 class="font-bold text-lg md:text-2xl">{name}</h2>
+        <p class="font-normal text-sm md:text-lg">{role}</p>
     </section>
 </article>
 
 <style lang="scss">
     article {
-        min-width: 256px;
-        max-width: 400px;
         background: #252525;
         border-radius: 8px;
         overflow: hidden;

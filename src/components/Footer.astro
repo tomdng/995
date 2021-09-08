@@ -1,5 +1,5 @@
 <footer class="bg-gray-dark">
-    <h1 class="font-semibold text-base">
+    <h1 class="font-semibold text-sm md:text-base">
         A website by
         <a class="text-accent underline" href="https://tomdong.io/">Tommy Dong</a>
     </h1>
@@ -11,5 +11,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media(max-width: 768px) {
+            height: 48px;
+        }
     }
 </style>
